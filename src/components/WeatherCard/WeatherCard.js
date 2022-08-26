@@ -12,17 +12,24 @@ const WeatherCard = function () {
   let classes = "";
   if (degree < 4) {
     classes = "weather-container-cold";
-  } else if (degree < 33) {
+  } else if (degree < 23) {
     classes = "weather-container-normal";
   } else {
     classes = "weather-container-hot";
   }
+
+  let containerClasses = "";
+  if (degree < 4) {
+    containerClasses = "main-cold";
+  } else if (degree < 23) {
+    containerClasses = "main-normal";
+  } else {
+    containerClasses = "main-hot";
+  }
+
   return (
-    <div>
-      <div
-        className={classes}
-        // id={degree >= 23 ? "weather-container-hot" : ""}
-      >
+    <div className={containerClasses}>
+      <div className={classes}>
         <h1 className="degree">{degree}</h1>
         <button
           className="change-degree"
