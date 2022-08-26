@@ -1,0 +1,25 @@
+.none{
+    display: none;
+}
+
+.ice-cold{
+    width: 35vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c8e9e991;
+    color: black;
+    margin-top: 20px;
+}
+
+.red-hot {
+    width: 35vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF4500;
+
+    margin-top: 20px;
+}
