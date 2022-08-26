@@ -1,79 +1,50 @@
-.main-cold {
+.main {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    image-rendering: auto;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+}
+
+.cold-main {
     background-image:url("https://images.newscientist.com/wp-content/uploads/2021/12/14173310/PRI_214150389.jpg?crop=4:3,smart&width=1200&height=900&upscale=true");
-    background-size:cover ;
-    background-position: center;
-    transition: 1s;
 }
 
-.main-normal {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    image-rendering: auto;
+.normal-main {
     background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sunrise-quotes-21-1586892331.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: 1s;
 }
 
-.main-hot {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    image-rendering: auto;
+.hot-main {
     background-image: url("https://i.pinimg.com/originals/98/95/6c/98956c93a41f9506ce8a65b820b4b885.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: 1s;
+
 }
 
-.weather-container-cold{
+.weather-container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 35vw;
     height: 70vh;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.cold {
     background-color:#c8e9e991 ;
-    border-radius: 5px;
-    transition: 1s;
 }
 
-.weather-container-normal{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 35vw;
-    height: 70vh;
+.normal {
     background-color: #fbf3f29e;
-    border-radius: 5px;
-    transition: 1s;
 }
 
-.weather-container-hot {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 35vw;
-    height: 70vh;
+.hot {
     background-color: #f9060667;
-    border-radius: 5px;
-    transition: 1s;
-
 }
 
 .degree {

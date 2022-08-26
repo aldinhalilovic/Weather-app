@@ -4,12 +4,16 @@ import "./WeatherAlarm.css";
 const WeatherAlarm = function ({ degree }) {
   return (
     <div>
-      <div className={`none ${degree < -10 ? "ice-cold" : ""}`}>
-        <h1>Smrzavanje</h1>
-      </div>
-      <div className={`none ${degree <= 40 && degree >= 33 ? "red-hot" : ""}`}>
-        <h1>Ne izlažite se suncu!!</h1>
-      </div>
+      {degree < -10 && (
+        <div className={"ice-cold"}>
+          <h1>Smrzavanje</h1>
+        </div>
+      )}
+      {degree <= 40 && degree >= 33 && (
+        <div className={"red-hot"}>
+          <h1>Ne izlažite se suncu!!</h1>
+        </div>
+      )}
     </div>
   );
 };
