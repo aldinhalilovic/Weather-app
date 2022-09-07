@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import WeatherAlarm from "../WeatherAlarm/WeatherAlarm";
 import "./WeatherCard.css";
+import { Button } from "semantic-ui-react";
 
 const WeatherCard = function () {
   const [degree, setDegree] = useState(0);
