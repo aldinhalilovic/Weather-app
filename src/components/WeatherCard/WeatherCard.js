@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import WeatherAlarm from "../WeatherAlarm/WeatherAlarm";
 import "./WeatherCard.css";
-import { Button } from "semantic-ui-react";
 
 const WeatherCard = function () {
   const [degree, setDegree] = useState(0);
@@ -19,17 +18,17 @@ const WeatherCard = function () {
     classes = "hot";
   }
 
-  let containerClasses = "";
+  let mainClasses = "";
   if (degree < 4) {
-    containerClasses = "cold-main";
+    mainClasses = "cold-main";
   } else if (degree < 23) {
-    containerClasses = "normal-main";
+    mainClasses = "normal-main";
   } else {
-    containerClasses = "hot-main";
+    mainClasses = "hot-main";
   }
 
   return (
-    <div className={`main ${containerClasses}`}>
+    <div className={`main ${mainClasses}`}>
       <div className={`weather-container ${classes}`}>
         <h1 className="degree">{degree}</h1>
         <button

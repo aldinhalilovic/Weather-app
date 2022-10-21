@@ -5,7 +5,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-image: url("https://www.infoplease.com/sites/infoplease.com/files/styles/scale800w/public/daily-images/Weather-of-the-Day.jpg?itok=8Rx6WxH9"); */
     background-size: cover;
     background-attachment: fixed;
 }

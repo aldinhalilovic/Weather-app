@@ -1,0 +1,73 @@
+[
+    
+    {   "Country" : "Portugal",
+        "City" : "Lisabon",
+        "Latitude" : "38.707008",
+        "Longitude" : "-9.135640"
+    } , 
+    {
+        "Country" : "Spain",
+        "City": "Madrid",
+        "Latitude": "40.416775",
+        "Longitude" : "-3.703790"
+    } , {
+        "Country" : "France",
+        "City" : "Pariz",
+        "Latitude" : "48.856613" ,
+        "Longitude" : "2.352222"
+    } ,
+    {
+        "Country": "Germany",
+        "City" : "Berlin",
+        "Latitude" : "52.520008" , 
+        "Longitude" : "13.404954"
+    } , 
+    {
+        "Country" : "Belgium",
+        "City" : "Brussels",
+        "Latitude" : "50.850346",
+        "Longitude" : "4.351721"
+    } , 
+    {
+        "Country" : "Netherland",
+        "City" : "Amsterdam",
+        "Latitude" : "52.370216",
+        "Longitude" : "4.895168"
+    } , 
+    {
+        "Country": "UK",
+        "City" : "London",
+        "Latitude" : "51.507351",
+        "Longitude" : "-0.127758"
+    } , 
+    {
+        "Country": "Ireland",
+        "City" : "Dublin",
+        "Latitude" : "53.349804",
+        "Longitude" : "-6.260310"
+    } , 
+    {
+        "Country": "Switzerland", 
+        "City": "Bern", 
+        "Latitude" : "46.947975",
+        "Longitude" : "7.447447"
+    } , 
+    {
+        "Country" : "Italy",
+        "City": "Rome", 
+        "Latitude" : "41.902782",
+        "Longitude" : "12.496365"
+    } , 
+    {
+        "Country" : "Austria" , 
+        "City" : "Vienna", 
+        "Latitude" : "48.208176",
+        "Longitude" : "16.373819"
+    } , 
+    {
+        "Country" : "Czechia",
+        "City" : "Prague",
+        "Latitude" : "50.075539",
+        "Longitude" : "14.437800"
+    } 
+]
