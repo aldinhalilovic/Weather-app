@@ -1,45 +1,54 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import WeatherAlarm from "../WeatherAlarm/WeatherAlarm";
+import { WeatherContext } from "../../app/context";
 import "./WeatherCard.css";
+import data from "../../data/data.json";
+import { NativeSelect } from "@mantine/core";
 
 const WeatherCard = function () {
-  const [degree, setDegree] = useState(0);
-
-  function randomNum(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  const { getData, currentDegree, country, city } = useContext(WeatherContext);
+  const [selectData] = useState(city);
 
   let classes = "";
-  if (degree < 4) {
+  if (currentDegree < 4) {
     classes = "cold";
-  } else if (degree < 23) {
+  } else if (currentDegree < 23) {
     classes = "normal";
   } else {
     classes = "hot";
   }
 
   let mainClasses = "";
-  if (degree < 4) {
+  if (currentDegree < 4) {
     mainClasses = "cold-main";
-  } else if (degree < 23) {
+  } else if (currentDegree < 23) {
     mainClasses = "normal-main";
   } else {
     mainClasses = "hot-main";
   }
 
+  useEffect(() => {
+    getData(city);
+    // eslint-disable-next-line
+  }, [city]);
   return (
     <div className={`main ${mainClasses}`}>
-      <div className={`weather-container ${classes}`}>
-        <h1 className="degree">{degree}</h1>
-        <button
-          className="change-degree"
-          onClick={() => setDegree(randomNum(-20, 40))}
-        >
-          {" "}
-          Change Degree
-        </button>
+      <NativeSelect
+        variant="filled"
+        data={data.map((el) => el.City)}
+        label="Select your city"
+        radius={"md"}
+        size="md"
+        value={selectData}
+        onChange={(e) => country(e.target.value)}
+      />
+      <div className="main-content">
+        {city?.City ? <h2>{city?.City}</h2> : <></>}
+        <div className={`weather-container ${classes}`}>
+          <h1 className="degree">{currentDegree?.toFixed()}°C</h1>
+        </div>
       </div>
-      <WeatherAlarm degree={degree} />
+      <WeatherAlarm degree={currentDegree} />
     </div>
   );
 };
